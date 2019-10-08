@@ -1,0 +1,13 @@
+<div class="contaner">
+  <div class="row">
+    <h1 class="title">{{article.title}}</h1>
+  </div>
+  <div class="row" class="other-info"> 
+    <small>
+      作者：{{article.user.username}} | 时间：{{article.createdAt | date:'shortDate'}} | 阅读量：{{article.clickTimes}} 
+    </small>
+  </div>
+  <div class="row">
+    <p class="content" [innerHTML]="article.content"></p>
+  </div>
+</div>

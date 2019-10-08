@@ -1,0 +1,22 @@
+.row {
+  margin: 0 auto;
+  height: 934px;
+  /* background-color: yellow; */
+}
+.left {
+  height: 100%;
+  position: relative;
+  padding: 0;
+  border-right: 1px dashed #337ab7;
+}
+.center {
+  /* background-color: blue; */
+  padding: 0 100px;
+}
+
+.right {
+  /* background-color: #ccc; */
+  height: 100%;
+  padding-right: 40px;
+  border-left: 1px dashed #337ab7;
+}

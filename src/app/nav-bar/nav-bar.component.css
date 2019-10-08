@@ -1,0 +1,19 @@
+.navbar {
+  margin: 0;
+}
+.navbar-brand {
+  padding-left: 50px;
+}
+.navbar-collapse {
+  padding-right: 50px;
+}
+.post{
+  color: #337ab7 !important;
+  font-size: 20px;
+  font-weight: 700;
+  border: 1px dashed #337ab7;
+}
+
+.dropdown {
+  margin-top:5px;
+}

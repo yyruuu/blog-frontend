@@ -1,0 +1,15 @@
+<div class="row" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+  <div class="panel panel-primary article" *ngFor="let article of articlesService.articles">
+    <div class="panel-heading">
+      <h3 class="panel-title">
+        <a [routerLink]="[ '/article/', article.id ]">{{article.title}}</a>
+      </h3>
+    </div>
+    <div class="panel-body" [innerHTML]="article.content"></div>
+    <div class="panel-footer">
+      <span *ngFor="let tag of article.tags">{{tag.name}}&nbsp;&nbsp;</span> | 
+      作者：{{article.user.username}} | 阅读量：{{article.clickTimes}}
+      <span class="time">发表时间：{{article.createdAt | date:'medium'}}</span>
+    </div>
+  </div>
+</div>

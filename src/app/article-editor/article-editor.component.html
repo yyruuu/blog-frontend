@@ -1,0 +1,22 @@
+<form class="header" method="POST" onsubmit="return false;">
+  <div class="row no-gutters">
+    <div class="col-md-8">
+      <div class="form-group">
+        <label for="title">标题：</label>
+        <input type="text" class="form-control" id="title" name="title" [(ngModel)]="title">
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="target">标签：</label>
+        <input type="text" class="form-control" id="target" name="target" [(ngModel)]="target">
+      </div>
+    </div>
+  </div>
+</form>
+<div class="editor">
+  <quill-editor [styles]="{height: '250px'}" placeholder="请输入文章内容" [(ngModel)]="content"  ></quill-editor>
+</div>
+<button type="button" class="btn btn-primary btn-lg" (click)="postArticle()">发布</button>
+<div class="alert alert-success" role="alert" [hidden]="isFail">成功！</div>
+<div class="alert alert-danger" role="alert" [hidden]="isSuccess">失败，请重试！</div>

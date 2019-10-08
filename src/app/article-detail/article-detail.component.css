@@ -1,0 +1,17 @@
+.title {
+  text-align: center;
+}
+.other-info {
+  text-align: center;
+  color: #686868;
+  font-size: 20px;
+}
+.other-info a {
+  color: #337ab7;
+}
+.content {
+  margin: 30px;
+  font-size: 20px;
+  line-height: 170%;
+  text-indent: 2em;
+}
