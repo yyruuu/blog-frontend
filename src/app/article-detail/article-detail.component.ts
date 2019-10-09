@@ -11,11 +11,7 @@ import { ConfigService } from '../sevices/config.service'
 })
 export class ArticleDetailComponent implements OnInit {
 
-  private article = {
-    user: {
-      username: "default_name"
-    }
-  };
+  private article = {};
   private newRouter = "";
   private id = null;
   constructor(

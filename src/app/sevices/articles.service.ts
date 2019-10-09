@@ -16,7 +16,7 @@ interface Article {
   providedIn: 'root'
 })
 export class ArticlesService {
-  public filter = null;
+  public filter = {};
   public articles = [];
   public pageNation = {
     pageSize: 10,
@@ -39,7 +39,7 @@ export class ArticlesService {
         nextPage: 0
       }
     }else {
-      this.filter = {};
+      this.filter = null;
     }
     if (this.pageNation.nextPage !== null) {
       const res = await this.http.get(`${this.configService.path}/api/article?offset=${this.pageNation.nextPage}&pageSize=${this.pageNation.pageSize}&filter=${JSON.stringify(this.filter)}`).toPromise();
@@ -52,7 +52,7 @@ export class ArticlesService {
   }
 
   async getArticlesByTag(tagId){
-    const res = await this.http.get(`${this.configService.path}/api/tag/${tagId}`).toPromise();
+    const res = await this.http.get(`${this.configService.path}/api/tag/article/${tagId}`).toPromise();
     if(res["err"] === 0) {
       this.articles = res["data"];
     }

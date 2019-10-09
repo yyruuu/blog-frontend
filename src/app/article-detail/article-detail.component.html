@@ -4,7 +4,7 @@
   </div>
   <div class="row" class="other-info"> 
     <small>
-      作者：{{article.user.username}} | 时间：{{article.createdAt | date:'shortDate'}} | 阅读量：{{article.clickTimes}} 
+      <span *ngIf="article.user">作者：{{article.user.username}}</span> | 时间：{{article.createdAt | date:'shortDate'}} | 阅读量：{{article.clickTimes}} 
     </small>
   </div>
   <div class="row">

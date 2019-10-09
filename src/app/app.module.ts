@@ -31,6 +31,7 @@ import { AdminArticleComponent } from './admin-article/admin-article.component';
 import { AdminTagComponent } from './admin-tag/admin-tag.component';
 import { AdminUserComponent } from './admin-user/admin-user.component';
 import { AdminPermissionComponent } from './admin-permission/admin-permission.component';
+import { AdminNavComponent } from './admin-nav/admin-nav.component';
 
 const appRoutes: Routes = [
   {
@@ -78,7 +79,12 @@ const appRoutes: Routes = [
     component: AdminComponent,
     children: [
       {
-        path: '', 
+        path: '',
+        redirectTo: 'article',
+        pathMatch: 'full'
+      },
+      {
+        path: 'article', 
         component: AdminArticleComponent
       },
       {
@@ -118,7 +124,8 @@ const appRoutes: Routes = [
     AdminArticleComponent,
     AdminTagComponent,
     AdminUserComponent,
-    AdminPermissionComponent
+    AdminPermissionComponent,
+    AdminNavComponent
   ],
   imports: [
     RouterModule.forRoot(
